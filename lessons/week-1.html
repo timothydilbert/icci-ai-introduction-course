@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Week 1 of AI, Hands On at ICCI: what AI is, rules versus learning, and a lab comparing ELIZA (1966) with a modern chatbot.">
+<title>Week 1 · Rules or learning? — AI, Hands On</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" aria-label="Site">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <span class="brand-mark" aria-hidden="true">AI</span>
+      <span class="nav-brand-text">
+        AI, Hands On
+        <small>Week 1 of 5</small>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#weeks" class="is-back">&larr; All weeks</a></li>
+      <li><a href="#objectives">Objectives</a></li>
+      <li><a href="#plan">Plan</a></li>
+      <li><a href="#warmup">Warm-up</a></li>
+      <li><a href="#watch">Watch</a></li>
+      <li><a href="#lab">Lab</a></li>
+      <li><a href="#reflect">Reflect</a></li>
+      <li><a href="#instructor">Instructor</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============ LESSON HERO ============ -->
+<header class="lesson-hero">
+  <div class="eyebrow">Week 1 of 5 &middot; What is AI?</div>
+  <h1>Rules or <em>learning?</em></h1>
+  <p class="lede">
+    Find the AI you already use every day, then hold the same conversation with a chatbot from 1966
+    and one from this year. By the end of the session you will be able to tell a rule-based system
+    from a learning-based one by how it behaves.
+  </p>
+  <div class="chips">
+    <span class="chip"><span class="dot"></span>2 hours</span>
+    <span class="chip is-orange"><span class="dot"></span>Phone or laptop</span>
+    <span class="chip is-yellow"><span class="dot"></span>ELIZA + ChatGPT</span>
+    <span class="chip"><span class="dot"></span>No coding</span>
+  </div>
+</header>
+
+<div class="lesson-grid">
+<div class="lesson-main">
+
+  <!-- ============ OBJECTIVES ============ -->
+  <section id="objectives" class="lesson-section">
+    <div class="eyebrow is-blue">By the end of this session</div>
+    <h2>You can&hellip;</h2>
+    <ul class="objectives">
+      <li><span class="check">1</span><div>Give a one-sentence definition of AI and name three examples from your own phone.</div></li>
+      <li><span class="check">2</span><div>Explain the difference between a system that follows written rules and one that learned from data.</div></li>
+      <li><span class="check">3</span><div>Run a fair test: send identical messages to two systems and compare what each does with your words.</div></li>
+      <li><span class="check">4</span><div>Say, with evidence, whether a chatbot understood you or matched a pattern.</div></li>
+    </ul>
+  </section>
+
+  <!-- ============ SESSION PLAN ============ -->
+  <section id="plan" class="lesson-section">
+    <div class="eyebrow">Session plan</div>
+    <h2>Two hours, <em>four moves.</em></h2>
+    <p class="lede">Every week runs the same rhythm: Watch &rarr; Try &rarr; Adjust &rarr; Reflect. Here is how Week 1 spends its time.</p>
+    <ol class="plan">
+      <li><span class="time">0:00 &ndash; 0:15</span><span class="what">Warm-up: AI around me<small>Audit five apps on your own phone</small></span><span class="mode is-try">Try</span></li>
+      <li><span class="time">0:15 &ndash; 0:40</span><span class="what">What is AI? Rules versus learning<small>Short explanation with a timeline and a diagram</small></span><span class="mode is-watch">Watch</span></li>
+      <li><span class="time">0:40 &ndash; 0:50</span><span class="what">Break</span><span class="mode">&nbsp;</span></li>
+      <li><span class="time">0:50 &ndash; 1:20</span><span class="what">Lab: ELIZA versus ChatGPT<small>Same three messages, two very different machines</small></span><span class="mode is-try">Try</span></li>
+      <li><span class="time">1:20 &ndash; 1:35</span><span class="what">Change one word<small>Find out which bot is actually paying attention</small></span><span class="mode is-adjust">Adjust</span></li>
+      <li><span class="time">1:35 &ndash; 1:55</span><span class="what">Worksheet, quick quiz and discussion</span><span class="mode is-reflect">Reflect</span></li>
+      <li><span class="time">1:55 &ndash; 2:00</span><span class="what">Take-home and a look at Week 2</span><span class="mode is-watch">Watch</span></li>
+    </ol>
+  </section>
+
+  <!-- ============ WARM-UP ============ -->
+  <section id="warmup" class="lesson-section">
+    <div class="eyebrow">Part 1 &middot; Warm-up &middot; 15 min</div>
+    <h2>AI around me.</h2>
+    <p class="lede">Before we define anything, notice how much of it you already use. Most people find AI in at least five apps within two minutes.</p>
+
+    <ol class="steps">
+      <li>
+        <h4>Open your phone and scroll your home screen</h4>
+        <p>Look for anything that <strong>predicts</strong>, <strong>recognises</strong>, <strong>ranks</strong>, or <strong>generates</strong>. Autocorrect predicts. Face unlock recognises. A social feed ranks. A photo filter generates.</p>
+      </li>
+      <li>
+        <h4>Write down five apps and what each one guesses</h4>
+        <p>Use the table below. The middle column is the important one: what is the app trying to guess about you or the world?</p>
+      </li>
+      <li>
+        <h4>Guess where the data came from</h4>
+        <p>Every guess is learned from examples. Whose examples? Yours? Everyone's? Write your best guess. We will check it in Week 2.</p>
+      </li>
+    </ol>
+
+    <div class="worksheet">
+      <div class="worksheet-head"><strong>Worksheet A &middot; AI around me</strong><span>5 rows &middot; keep it</span></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>App</th><th>What it predicts, recognises, ranks or generates</th><th>Where the examples probably came from</th></tr></thead>
+          <tbody>
+            <tr><td class="label">Example: Maps</td><td>How long the drive to George Town will take right now</td><td>Millions of phones reporting their speed on the same road</td></tr>
+            <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+            <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+            <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+            <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+            <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout is-blue">
+      <strong>Share one</strong>
+      When the class regroups, each person names one app and its guess. Listen for the pattern: almost all of them are guessing what you will do next.
+    </div>
+  </section>
+
+  <!-- ============ WATCH ============ -->
+  <section id="watch" class="lesson-section">
+    <div class="eyebrow">Part 2 &middot; Watch &middot; 25 min</div>
+    <h2>What is AI, <em>really?</em></h2>
+
+    <div class="reading">
+      <p>Here is the definition we use for the whole course:</p>
+      <div class="pullquote">Artificial intelligence is software that does a task we would normally say needs human judgement: recognising, predicting, deciding, or creating.</div>
+      <p>That is deliberately broad. Autocorrect counts. So does a self-driving car. The interesting question is not <em>whether</em> something is AI, but <em>how it was built</em>. There are two ways, and the whole course hangs on the difference.</p>
+
+      <h3>Way one: people write the rules</h3>
+      <p>A programmer sits down and writes instructions for every situation. <strong>If</strong> the message contains the word &ldquo;mother&rdquo;, <strong>then</strong> reply &ldquo;Tell me more about your family.&rdquo; The program never learns. It only does what someone wrote. When it meets a situation nobody wrote a rule for, it falls back to a generic response or fails.</p>
+      <p>This is how ELIZA works. It is also how a lot of useful software works: tax calculators, traffic lights, the rules of a board game. Rules are predictable, explainable, and cheap. They are also brittle.</p>
+
+      <h3>Way two: the machine learns from examples</h3>
+      <p>Instead of writing rules, you collect thousands or billions of <strong>examples</strong> and let an algorithm find the patterns. Show it ten thousand photos labelled &ldquo;cat&rdquo; and &ldquo;not cat&rdquo;, and it works out for itself what makes a cat. The result is called a <strong>model</strong>: a big bundle of numbers that turns an input into a prediction.</p>
+      <p>Nobody wrote a rule that says &ldquo;cats have pointed ears.&rdquo; The model found something like that on its own, in a form no human can easily read. That is the power and the problem. It handles situations nobody anticipated, and nobody can fully explain why it answered the way it did.</p>
+    </div>
+
+    <figure class="fig">
+      <svg viewBox="0 0 720 300" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title>Two ways to build AI: rules written by people, or a model learned from data</title>
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#555560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <!-- Row labels -->
+        <text class="th" x="20" y="70" fill="#0E5C8C">RULES</text>
+        <text class="ts" x="20" y="88">1950s onward</text>
+        <text class="th" x="20" y="210" fill="#E85D1F">LEARNING</text>
+        <text class="ts" x="20" y="228">2010s onward</text>
+        <!-- Rules row -->
+        <g>
+          <rect x="130" y="40" width="150" height="60" rx="8" fill="#E6EFF5" stroke="#0E5C8C"/>
+          <text class="th" x="205" y="64" text-anchor="middle">A person</text>
+          <text class="ts" x="205" y="82" text-anchor="middle">writes if / then rules</text>
+        </g>
+        <line x1="280" y1="70" x2="320" y2="70" stroke="#555560" stroke-width="1.5" marker-end="url(#arr)"/>
+        <g>
+          <rect x="325" y="40" width="150" height="60" rx="8" fill="#E6EFF5" stroke="#0E5C8C"/>
+          <text class="th" x="400" y="64" text-anchor="middle">Program</text>
+          <text class="ts" x="400" y="82" text-anchor="middle">follows them exactly</text>
+        </g>
+        <line x1="475" y1="70" x2="515" y2="70" stroke="#555560" stroke-width="1.5" marker-end="url(#arr)"/>
+        <g>
+          <rect x="520" y="40" width="180" height="60" rx="8" fill="#F7F7F5" stroke="#8A8A94"/>
+          <text class="th" x="610" y="64" text-anchor="middle">Answer</text>
+          <text class="ts" x="610" y="82" text-anchor="middle">same input, same output</text>
+        </g>
+        <!-- Learning row -->
+        <g>
+          <rect x="130" y="180" width="150" height="60" rx="8" fill="#FCE8DD" stroke="#E85D1F"/>
+          <text class="th" x="205" y="204" text-anchor="middle">Examples</text>
+          <text class="ts" x="205" y="222" text-anchor="middle">lots of labelled data</text>
+        </g>
+        <line x1="280" y1="210" x2="320" y2="210" stroke="#555560" stroke-width="1.5" marker-end="url(#arr)"/>
+        <g>
+          <rect x="325" y="180" width="150" height="60" rx="8" fill="#FCE8DD" stroke="#E85D1F"/>
+          <text class="th" x="400" y="204" text-anchor="middle">Training</text>
+          <text class="ts" x="400" y="222" text-anchor="middle">finds the patterns</text>
+        </g>
+        <line x1="475" y1="210" x2="515" y2="210" stroke="#555560" stroke-width="1.5" marker-end="url(#arr)"/>
+        <g>
+          <rect x="520" y="180" width="180" height="60" rx="8" fill="#FBF1D2" stroke="#F4B41A"/>
+          <text class="th" x="610" y="204" text-anchor="middle">Model</text>
+          <text class="ts" x="610" y="222" text-anchor="middle">guesses on new input</text>
+        </g>
+        <!-- Divider -->
+        <line x1="20" y1="140" x2="700" y2="140" stroke="#E4E4E0" stroke-dasharray="4 4"/>
+        <text class="mono" x="360" y="272" text-anchor="middle">The person decides the rules  ·  The data decides the model</text>
+      </svg>
+      <figcaption>Figure 1 &mdash; Two ways to build the same kind of software</figcaption>
+    </figure>
+
+    <div class="reading">
+      <h3>Why this matters to you</h3>
+      <p>Almost everything called &ldquo;AI&rdquo; today is the second kind. That has three consequences you will meet again and again in this course:</p>
+      <ul>
+        <li><strong>The data is the product.</strong> A model can only know what its examples showed it. Week 2 makes you feel this.</li>
+        <li><strong>It is confident, not correct.</strong> A model always produces an answer, even when it should say &ldquo;I don't know.&rdquo; Week 4 exploits this.</li>
+        <li><strong>Whoever collected the examples chose what &ldquo;normal&rdquo; looks like.</strong> Week 5 audits that.</li>
+      </ul>
+
+      <h3>A very short history</h3>
+    </div>
+
+    <div class="table-scroll">
+      <table class="compare">
+        <thead><tr><th>Year</th><th>What happened</th><th>Rules or learning?</th></tr></thead>
+        <tbody>
+          <tr><td>1950</td><td>Alan Turing proposes a test: can a machine hold a conversation a person cannot distinguish from a human's?</td><td>The question is asked</td></tr>
+          <tr><td>1956</td><td>The term &ldquo;artificial intelligence&rdquo; is coined at a summer workshop at Dartmouth College.</td><td>Mostly rules</td></tr>
+          <tr><td>1966</td><td>Joseph Weizenbaum builds ELIZA. People confide in it even after being told how simple it is.</td><td>Rules</td></tr>
+          <tr><td>1997</td><td>IBM's Deep Blue beats the world chess champion, by searching millions of positions per second.</td><td>Rules plus brute force</td></tr>
+          <tr><td>2012</td><td>A neural network wins the ImageNet photo-recognition contest by a huge margin. Deep learning takes over.</td><td>Learning</td></tr>
+          <tr><td>2017</td><td>The transformer architecture is published. It is the design behind every modern chatbot.</td><td>Learning</td></tr>
+          <tr><td>2022</td><td>ChatGPT is released and reaches 100 million users in two months.</td><td>Learning, at scale</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="reading"><h3>Key terms for this week</h3></div>
+    <dl class="terms">
+      <div class="term"><dt>Artificial intelligence</dt><dd>Software doing a task we would normally say needs human judgement.</dd></div>
+      <div class="term"><dt>Rule-based system</dt><dd>A program that follows instructions a person wrote. It never changes unless someone rewrites it.</dd></div>
+      <div class="term"><dt>Machine learning</dt><dd>Building software by showing it examples and letting an algorithm find the patterns.</dd></div>
+      <div class="term"><dt>Model</dt><dd>The result of training. A bundle of learned numbers that turns an input into a guess.</dd></div>
+      <div class="term"><dt>Training data</dt><dd>The examples a model learned from. It defines everything the model can and cannot do.</dd></div>
+      <div class="term"><dt>Pattern matching</dt><dd>Responding to the shape of an input without any grasp of its meaning. ELIZA does only this.</dd></div>
+    </dl>
+
+    <div class="table-scroll">
+      <table class="compare">
+        <thead><tr><th>&nbsp;</th><th>Rules (ELIZA)</th><th>Learning (ChatGPT)</th></tr></thead>
+        <tbody>
+          <tr><td>How it was built</td><td>A person wrote a few hundred patterns and templates</td><td>Trained on a large slice of the internet, then tuned by human feedback</td></tr>
+          <tr><td>What it does with your words</td><td>Finds a keyword and swaps it into a template</td><td>Predicts, word by word, the most likely continuation</td></tr>
+          <tr><td>Uses your details?</td><td>Only the keyword it matched</td><td>Usually all of them, and sometimes invents more</td></tr>
+          <tr><td>Same input twice</td><td>Same answer, or one of a few fixed variants</td><td>Different answer every time</td></tr>
+          <tr><td>When it has no rule or pattern</td><td>Falls back to &ldquo;Please go on&rdquo;</td><td>Produces something plausible anyway</td></tr>
+          <tr><td>Can it be wrong?</td><td>Only if the rules are wrong</td><td>Yes, fluently and confidently</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ LAB ============ -->
+  <section id="lab" class="lesson-section">
+    <div class="eyebrow">Part 3 &middot; Try &middot; 30 min</div>
+    <h2>ELIZA versus ChatGPT.</h2>
+    <p class="lede">A fair test means identical input. You will send the same three messages, in the same order, to both systems, and record what each one did with your words.</p>
+
+    <ol class="steps">
+      <li>
+        <h4>Open both tools side by side</h4>
+        <p>ELIZA in one tab, ChatGPT in another. On a phone, switch between them. Neither needs anything installed.</p>
+        <div class="btn-row">
+          <a class="btn is-small" href="https://anthay.github.io/eliza.html" target="_blank" rel="noopener">Open ELIZA ↗</a>
+          <a class="btn is-small is-ghost" href="https://chat.openai.com" target="_blank" rel="noopener">Open ChatGPT ↗</a>
+        </div>
+      </li>
+      <li>
+        <h4>Send message 1 to both, then message 2, then message 3</h4>
+        <p>Copy them exactly. Do not reword for either bot. That is the point.</p>
+        <div class="prompts" id="lab-prompts">
+          <strong>The three messages</strong>
+          <div class="pline">I have an exam on Friday and I feel unprepared.</div>
+          <div class="pline">What should I cook tonight with rice, eggs and a tomato?</div>
+          <div class="pline">Tell me something you know about the Cayman Islands.</div>
+          <button type="button" class="copy" data-copy-from="#lab-prompts">Copy all three</button>
+        </div>
+      </li>
+      <li>
+        <h4>After each reply, fill in one row of Worksheet B</h4>
+        <p>Two questions per reply: <strong>Which of my words did it use?</strong> and <strong>Did it add anything I did not say?</strong> Be literal. Quote the reply if it helps.</p>
+      </li>
+      <li>
+        <h4>Keep the conversation going for two more turns with each</h4>
+        <p>Reply naturally to whatever each bot said. Notice how quickly ELIZA runs out of road, and whether ChatGPT remembers what you said three messages ago.</p>
+      </li>
+      <li>
+        <h4>Screenshot one exchange from each</h4>
+        <p>Pick the moment that best shows the difference. These two screenshots are part of your take-home.</p>
+      </li>
+    </ol>
+
+    <div class="worksheet">
+      <div class="worksheet-head"><strong>Worksheet B &middot; Same words, two machines</strong><span>fill in during the lab</span></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Message</th><th>ELIZA: which of my words did it use? Did it add anything?</th><th>ChatGPT: which of my words did it use? Did it add anything?</th></tr></thead>
+          <tbody>
+            <tr><td class="label">1. Exam on Friday</td><td class="fill"></td><td class="fill"></td></tr>
+            <tr><td class="label">2. Rice, eggs, tomato</td><td class="fill"></td><td class="fill"></td></tr>
+            <tr><td class="label">3. Cayman Islands</td><td class="fill"></td><td class="fill"></td></tr>
+            <tr><td class="label">Two turns later</td><td class="fill"></td><td class="fill"></td></tr>
+            <tr><td class="label">Verdict: rules or learning? Evidence?</td><td class="fill"></td><td class="fill"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>If ChatGPT will not load</strong>
+      Rate limits and login hiccups happen. Use Claude at claude.ai instead. The lab works the same way with any modern assistant.
+    </div>
+
+    <h3 id="adjust">Adjust: change one word (15 min)</h3>
+    <div class="reading">
+      <p>Now find out which bot is actually reading. Send each of these follow-ups to both systems. Each one changes a single detail from an earlier message.</p>
+    </div>
+    <div class="prompts" id="adjust-prompts">
+      <strong>One-word changes</strong>
+      <div class="pline">I have an exam on Friday and I feel <em>prepared</em>.</div>
+      <div class="pline">What should I cook tonight with rice, eggs and a tomato, <em>but I am allergic to eggs</em>?</div>
+      <div class="pline">Tell me something you know about <em>Cayman Brac</em>.</div>
+      <button type="button" class="copy" data-copy-from="#adjust-prompts">Copy all three</button>
+    </div>
+    <div class="reading">
+      <p>Write down which bot noticed the change and what it did about it. A system that follows keyword rules will often give you the same reply as before. A system that predicts from context should respond to the new detail, though it may also make something up, especially about Cayman Brac. Note that too. It is next month's lesson arriving early.</p>
+    </div>
+  </section>
+
+  <!-- ============ REFLECT ============ -->
+  <section id="reflect" class="lesson-section">
+    <div class="eyebrow">Part 4 &middot; Reflect &middot; 20 min</div>
+    <h2>What did you <em>actually</em> see?</h2>
+
+    <div class="ask">
+      <strong>Ask yourself</strong>
+      <p>Which bot used the details you gave it? Point to the exact words in its reply.</p>
+      <p>Where did each one break, repeat itself, or sound hollow?</p>
+      <p>If nobody had told you which was from 1966, what would have given it away?</p>
+      <p>ELIZA's creator was alarmed that people confided in it anyway. Did you feel any pull to treat either bot as a person? What caused it?</p>
+    </div>
+
+    <div class="reading"><h3>Quick check</h3><p>Four questions. Tap an answer to see why.</p></div>
+    <div class="quiz">
+      <div class="quiz-item">
+        <div class="q">1. ELIZA replies &ldquo;Why do you say you feel unprepared?&rdquo; What is it doing?</div>
+        <div class="options">
+          <button type="button">Understanding your worry and asking a caring follow-up</button>
+          <button type="button" data-correct="true">Matching a keyword and dropping your words into a question template</button>
+          <button type="button">Predicting the most likely next sentence from training data</button>
+        </div>
+        <div class="why">ELIZA has a rule roughly like: if the message contains &ldquo;I feel X&rdquo;, reply &ldquo;Why do you say you feel X?&rdquo; No understanding, no prediction, just a template.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="q">2. Which statement about a learning-based model is true?</div>
+        <div class="options">
+          <button type="button">A programmer wrote a rule for every situation it can handle</button>
+          <button type="button">It looks up the answer in a database every time</button>
+          <button type="button" data-correct="true">It can only know what its training examples showed it</button>
+        </div>
+        <div class="why">Training data defines the model. Nothing was written by hand for each situation, and a plain chatbot does not look anything up unless it is connected to a search tool.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="q">3. You send the same message to ChatGPT twice and get two different replies. Why?</div>
+        <div class="options">
+          <button type="button" data-correct="true">It samples from a range of likely next words, so each run can differ</button>
+          <button type="button">It remembers you and is trying to be less repetitive</button>
+          <button type="button">The rules were updated between the two messages</button>
+        </div>
+        <div class="why">The model produces probabilities for the next word and picks among the likely ones. That randomness is why identical prompts give different answers.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="q">4. Which is the best evidence that a system is rule-based?</div>
+        <div class="options">
+          <button type="button">It answers quickly</button>
+          <button type="button" data-correct="true">Changing one important word does not change its reply</button>
+          <button type="button">It is polite</button>
+        </div>
+        <div class="why">If the reply ignores a detail that should have changed it, the system probably matched a keyword rather than reading the whole message. Speed and tone prove nothing.</div>
+      </div>
+    </div>
+
+    <div class="fits">
+      <strong>Where this fits</strong>
+      <p>ELIZA follows hand-written rules: spot a keyword, drop it into a template, ask a question back. A modern assistant learned its behaviour from an enormous pile of text and predicts what comes next. Same chat window, two completely different machines.</p>
+      <p>You now have the frame for the whole course. Next week you build the second kind yourself, with your own photos as the training data, and you find out what happens when the examples are bad.</p>
+    </div>
+
+    <div class="callout is-orange">
+      <strong>Take-home (keep for your portfolio)</strong>
+      Worksheet A (AI around me), Worksheet B (the comparison), and one screenshot from each bot. Bring them to Week 2. We start by looking at the &ldquo;where did the examples come from&rdquo; column.
+    </div>
+  </section>
+
+  <!-- ============ INSTRUCTOR NOTES ============ -->
+  <section id="instructor" class="lesson-section">
+    <div class="instructor">
+      <div class="eyebrow">Instructor notes</div>
+      <h2 style="font-family: var(--font-display); font-size: 28px; font-weight: 500; margin: 8px 0 4px;">Running this session</h2>
+      <p>Everything a facilitator needs that students do not. Students are welcome to read it.</p>
+      <div class="instructor-grid">
+        <div>
+          <h3>Set-up (5 min before)</h3>
+          <ul class="arrow-list">
+            <li>Load ELIZA on the projector and have one exchange ready to show. It is more convincing live than described.</li>
+            <li>Check the room Wi-Fi handles 20 simultaneous ChatGPT logins. If not, pair people and use Claude as the overflow.</li>
+            <li>Print Worksheets A and B for anyone without a device. This page prints cleanly with the sidebar removed.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Timing traps</h3>
+          <ul class="arrow-list">
+            <li>The warm-up runs long. Cap it at five apps and cut sharing to one app per person.</li>
+            <li>Students will want to keep chatting with ChatGPT. Announce the two-turn limit before they start.</li>
+            <li>If the lab overruns, drop the &ldquo;two turns later&rdquo; row, not the Adjust step. The one-word change is the strongest evidence in the lesson.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Discussion prompts</h3>
+          <ul class="arrow-list">
+            <li>&ldquo;ELIZA is 57 years old and 200 lines of rules. Why did people in 1966 tell it their secrets?&rdquo;</li>
+            <li>&ldquo;ChatGPT invented a fact about Cayman Brac. Is that better or worse than ELIZA saying nothing?&rdquo;</li>
+            <li>&ldquo;Which of the five apps on your phone would you least want to be rule-based? Which would you least want to be learned?&rdquo;</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What good looks like</h3>
+          <ul class="arrow-list">
+            <li>Worksheet B verdicts cite specific words from a reply, not a feeling.</li>
+            <li>At least one student notices ChatGPT invented something about Cayman Brac without being prompted to look for it.</li>
+            <li>Students can restate the rules-versus-learning distinction in their own words on the way out.</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top: 20px;">Source for the chatbot: <a href="https://anthay.github.io/eliza.html" target="_blank" rel="noopener">Anthony Hay's faithful ELIZA reconstruction</a>, which runs the original 1966 DOCTOR script.</p>
+    </div>
+  </section>
+
+</div><!-- /.lesson-main -->
+
+<!-- ============ SIDEBAR ============ -->
+<aside class="lesson-side" aria-label="Lesson tools">
+  <div class="progress" data-progress-key="week-1">
+    <h4 class="kicker">Your progress</h4>
+    <ul>
+      <li><input type="checkbox" id="p1"><label for="p1">Worksheet A: five apps listed</label></li>
+      <li><input type="checkbox" id="p2"><label for="p2">Read: rules versus learning</label></li>
+      <li><input type="checkbox" id="p3"><label for="p3">Three messages sent to both bots</label></li>
+      <li><input type="checkbox" id="p4"><label for="p4">Worksheet B filled in</label></li>
+      <li><input type="checkbox" id="p5"><label for="p5">One-word changes tested</label></li>
+      <li><input type="checkbox" id="p6"><label for="p6">Quiz done, two screenshots saved</label></li>
+    </ul>
+    <div class="bar"><span></span></div>
+    <small data-progress-count>0 of 6 done</small>
+  </div>
+
+  <div class="aside">
+    <h4>On this page</h4>
+    <ul class="on-page">
+      <li><a href="#objectives">Objectives</a></li>
+      <li><a href="#plan">Session plan</a></li>
+      <li><a href="#warmup">Warm-up: AI around me</a></li>
+      <li><a href="#watch">Watch: what is AI?</a></li>
+      <li><a href="#lab">Lab: ELIZA vs ChatGPT</a></li>
+      <li><a href="#reflect">Reflect and quiz</a></li>
+      <li><a href="#instructor">Instructor notes</a></li>
+    </ul>
+  </div>
+
+  <div class="aside">
+    <h4>Tools</h4>
+    <div class="tools-list">
+      <a href="https://anthay.github.io/eliza.html" target="_blank" rel="noopener">ELIZA (1966) <span class="ext">↗</span></a>
+      <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT (free) <span class="ext">↗</span></a>
+      <a href="https://claude.ai" target="_blank" rel="noopener">Claude (backup) <span class="ext">↗</span></a>
+    </div>
+    <div class="takehome">
+      <strong>Take-home</strong>
+      Worksheets A and B + one screenshot from each bot
+    </div>
+    <div class="btn-row"><button type="button" class="btn is-small is-ghost" onclick="window.print()">Print worksheets</button></div>
+  </div>
+</aside>
+
+</div><!-- /.lesson-grid -->
+
+<!-- ============ PAGER ============ -->
+<nav class="pager" aria-label="Lesson navigation">
+  <a href="../index.html#weeks"><span class="dir">&larr; Back</span><span class="name">Course overview</span></a>
+  <a href="../index.html#week-2" class="is-next"><span class="dir">Next &rarr;</span><span class="name">Week 2: Teach a machine to see</span></a>
+</nav>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">AI</span>
+      <div class="footer-brand-text">
+        AI, Hands On
+        <small>International College of the Cayman Islands</small>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>Week 1 of 5 &middot; Rules or learning?</p>
+      <p>External links open in a new tab. Your progress ticks are saved only on this device.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
