@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI, Hands On — a five-week, no-code introduction to artificial intelligence at the International College of the Cayman Islands. Learn AI by using it.">
+<title>AI, Hands On — ICCI Introduction to AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" aria-label="Site">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      <span class="brand-mark" aria-hidden="true">AI</span>
+      <span class="nav-brand-text">
+        AI, Hands On
+        <small>ICCI &middot; Introduction to AI</small>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#start">Before You Start</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#weeks">Weekly Labs</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<header id="top" class="hero">
+  <div class="eyebrow">An introduction to AI at ICCI</div>
+  <h1>AI, <em>hands on.</em><br>Learn it by using it.</h1>
+  <p class="hero-pitch">
+    <strong>Five weeks. Two hours a week. No coding, no maths, no prerequisites.</strong>
+    Every session pairs a short explanation with a lab you do yourself: teach a machine to see,
+    watch a neural network think, make a chatbot invent facts and then catch it, and finish with
+    a plan for using AI in your own studies and work.
+  </p>
+  <div class="chips">
+    <span class="chip"><span class="dot"></span>5 weeks &middot; 10 hours total</span>
+    <span class="chip is-orange"><span class="dot"></span>Half explanation, half lab</span>
+    <span class="chip is-yellow"><span class="dot"></span>Free browser tools only</span>
+  </div>
+
+  <!-- WHAT YOU'LL LEAVE WITH -->
+  <div id="overview" class="build">
+    <div class="eyebrow is-blue">What you will leave with</div>
+    <h2>Six things you made. <span class="accent">Not six things you heard about.</span></h2>
+    <ul class="build-list">
+      <li><span class="check">1</span><div>A one-page &ldquo;AI around me&rdquo; audit of the apps you already use<span class="when">Week 1</span></div></li>
+      <li><span class="check">2</span><div>An image classifier you trained, broke, and fixed yourself<span class="when">Week 2</span></div></li>
+      <li><span class="check">3</span><div>Annotated screenshots of a neural network seeing and an AI reading<span class="when">Week 3</span></div></li>
+      <li><span class="check">4</span><div>A prompt ladder (three versions of one request) and one hallucination you proved false<span class="when">Week 4</span></div></li>
+      <li><span class="check">5</span><div>A side-by-side bias audit of two major AI assistants<span class="when">Week 5</span></div></li>
+      <li><span class="check">6</span><div>Your personal AI use policy and a six-month learning plan<span class="when">Week 5</span></div></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============ BEFORE YOU START ============ -->
+<section id="start" class="section">
+  <div class="section-header">
+    <div class="eyebrow">Before week 1</div>
+    <h2>Five-minute pre-flight.</h2>
+    <p class="section-lede">Do these before our first session so we spend class time on the labs, not on sign-up screens. Everything is free.</p>
+  </div>
+
+  <div class="checklist">
+    <ul class="checklist-list">
+      <li>
+        <span class="box"></span>
+        <div>
+          <strong>Create a free ChatGPT account</strong>
+          <span>Go to chat.openai.com and sign up with any email. Used in Weeks 1, 4 and 5.</span>
+        </div>
+      </li>
+      <li>
+        <span class="box"></span>
+        <div>
+          <strong>Create a free Google Gemini account</strong>
+          <span>Go to gemini.google.com and sign in with a Google account. Used in Week 5 for the side-by-side audit.</span>
+        </div>
+      </li>
+      <li>
+        <span class="box"></span>
+        <div>
+          <strong>Bring a laptop if you have one</strong>
+          <span>A phone works for most labs. Week 2 uses a webcam, so a laptop is best. We will pair people up if needed.</span>
+        </div>
+      </li>
+      <li>
+        <span class="box"></span>
+        <div>
+          <strong>Know how to take a screenshot</strong>
+          <span>Most take-home artifacts are screenshots. Mac: Cmd+Shift+4. Windows: Win+Shift+S. Phone: power + volume.</span>
+        </div>
+      </li>
+      <li>
+        <span class="box"></span>
+        <div>
+          <strong>Bring something to write in</strong>
+          <span>Each lesson has a short worksheet. A notebook or a document on your device is fine.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section id="journey" class="section">
+  <div class="section-header">
+    <div class="eyebrow">The journey</div>
+    <h2>One story, told in five parts.</h2>
+    <p class="section-lede">
+      AI starts with <strong>data</strong>, which is used to <strong>train a model</strong>, which
+      <strong>recognises patterns</strong>, which lets it <strong>generate</strong> new things, which
+      <strong>people</strong> then have to use wisely. Each week is one chapter of that story.
+    </p>
+  </div>
+
+  <div class="journey-map">
+    <div class="journey-track">
+      <a class="journey-step" href="#week-1">
+        <div class="num">1</div>
+        <div class="journey-step-text">
+          <div class="label">Week 1</div>
+          <div class="title">Rules or learning?</div>
+          <div class="desc">What AI is, and is not</div>
+        </div>
+      </a>
+      <a class="journey-step" href="#week-2">
+        <div class="num">2</div>
+        <div class="journey-step-text">
+          <div class="label">Week 2</div>
+          <div class="title">Data becomes a model</div>
+          <div class="desc">Training, testing, failing</div>
+        </div>
+      </a>
+      <a class="journey-step" href="#week-3">
+        <div class="num">3</div>
+        <div class="journey-step-text">
+          <div class="label">Week 3</div>
+          <div class="title">Inside the model</div>
+          <div class="desc">Layers, tokens, patterns</div>
+        </div>
+      </a>
+      <a class="journey-step" href="#week-4">
+        <div class="num">4</div>
+        <div class="journey-step-text">
+          <div class="label">Week 4</div>
+          <div class="title">Models generate</div>
+          <div class="desc">Prompting and hallucination</div>
+        </div>
+      </a>
+      <a class="journey-step" href="#week-5">
+        <div class="num">5</div>
+        <div class="journey-step-text">
+          <div class="label">Week 5</div>
+          <div class="title">People decide</div>
+          <div class="desc">Bias, ethics, your plan</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WEEKS ============ -->
+<section id="weeks" class="section">
+  <div class="section-header">
+    <div class="eyebrow">Weekly labs</div>
+    <h2>Five labs. <em>One rhythm.</em></h2>
+    <p class="section-lede">
+      Every session runs the same way: <strong>Watch &rarr; Try &rarr; Adjust &rarr; Reflect.</strong>
+      A short explanation, a lab you do yourself, a change you make on purpose, and a few questions
+      to answer honestly. Tap a week to see what happens in it.
+    </p>
+  </div>
+
+  <div class="weeks">
+
+    <!-- WEEK 1 -->
+    <details class="week" id="week-1" open>
+      <summary class="week-summary">
+        <div class="week-num">01</div>
+        <div class="week-title-block">
+          <div class="week-eyebrow">What is AI? &middot; A short history</div>
+          <h3>Rules or learning? Talk to two chatbots 57 years apart.</h3>
+          <div class="week-lab">&ldquo;AI around me&rdquo; audit + ELIZA vs a modern assistant</div>
+        </div>
+        <div class="toggle" aria-hidden="true"></div>
+      </summary>
+      <div class="week-body">
+        <div>
+          <h4>This week you will</h4>
+          <p>Find the AI you already use without noticing, then hold the same conversation with a chatbot from 1966 and one from this year. By the end you can tell a rule-based system from a learning-based one by how it behaves, not by its label.</p>
+
+          <h4>What you'll do</h4>
+          <ul class="arrow-list">
+            <li>Audit your phone: list five apps that use AI and write down what each one predicts</li>
+            <li>Send the same three messages to ELIZA and to ChatGPT</li>
+            <li>Change one word in a message and see which bot notices</li>
+            <li>Fill in the comparison worksheet and decide: rules, or learning?</li>
+          </ul>
+
+          <div class="prompts">
+            <strong>Send these to both bots</strong>
+            <div class="pline">I have an exam on Friday and I feel unprepared.</div>
+            <div class="pline">What should I cook tonight with rice, eggs and a tomato?</div>
+            <div class="pline">Tell me something you know about the Cayman Islands.</div>
+          </div>
+
+          <div class="ask">
+            <strong>Ask yourself</strong>
+            <p>Which bot actually used the details you gave it? How could you tell?</p>
+            <p>Where did each one break, repeat itself, or sound hollow?</p>
+            <p>If nobody told you which was from 1966, what would give it away?</p>
+          </div>
+
+          <div class="fits">
+            <strong>Where this fits</strong>
+            ELIZA follows hand-written rules: spot a keyword, swap it into a template, ask a question back. A modern assistant learned its behaviour from an enormous pile of text. Same chat window, two completely different machines. Next week you build the second kind yourself.
+          </div>
+        </div>
+        <aside class="aside">
+          <h4>Tools</h4>
+          <div class="tools-list">
+            <a href="https://anthay.github.io/eliza.html" target="_blank" rel="noopener">ELIZA (1966) <span class="ext">↗</span></a>
+            <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT (free) <span class="ext">↗</span></a>
+          </div>
+          <div class="takehome">
+            <strong>Take-home</strong>
+            Your &ldquo;AI around me&rdquo; audit + the completed ELIZA vs ChatGPT worksheet
+          </div>
+          <div class="week-cta">
+            <a class="btn is-block" href="lessons/week-1.html">Open the full lesson &rarr;</a>
+          </div>
+        </aside>
+      </div>
+    </details>
+
+    <!-- WEEK 2 -->
+    <details class="week" id="week-2">
+      <summary class="week-summary">
+        <div class="week-num">02</div>
+        <div class="week-title-block">
+          <div class="week-eyebrow">Data &middot; Machine learning basics</div>
+          <h3>Teach a machine to see. Then make it fail on purpose.</h3>
+          <div class="week-lab">Train an image classifier twice with Teachable Machine</div>
+        </div>
+        <div class="toggle" aria-hidden="true"></div>
+      </summary>
+      <div class="week-body">
+        <div>
+          <h4>This week you will</h4>
+          <p>Train a working image classifier from your webcam in under ten minutes. Then train it again with better data and watch the confidence scores change. You will leave knowing, from experience, why data quality matters more than the algorithm.</p>
+
+          <h4>What you'll do</h4>
+          <ul class="arrow-list">
+            <li>Pick two objects to tell apart (a pen and a phone, an open hand and a fist)</li>
+            <li><strong>Round 1, the lazy way:</strong> ten photos of each, one angle, one background</li>
+            <li>Test it with the object moved, tilted, or in different light. Note what breaks</li>
+            <li><strong>Round 2, the careful way:</strong> thirty or more photos of each, varied angle, distance and lighting</li>
+            <li>Test again and compare the two rounds on the worksheet</li>
+            <li><strong>Stretch:</strong> add a third class, or try to fool the model with a photo of a photo</li>
+          </ul>
+
+          <div class="ask">
+            <strong>Ask yourself</strong>
+            <p>What did Round 1 get confidently wrong? Why would it be confident?</p>
+            <p>Between rounds you changed the data, not the algorithm. What does that tell you about most AI failures?</p>
+            <p>Who was in your training photos? Who was not? Who would this model work worst for?</p>
+          </div>
+
+          <div class="fits">
+            <strong>Where this fits</strong>
+            You just ran the whole supervised-learning loop: collect examples, label them, train, test. You also felt &ldquo;garbage in, garbage out&rdquo; first-hand. Next week you open a much bigger model and look at what the training actually built inside it.
+          </div>
+        </div>
+        <aside class="aside">
+          <h4>Tools</h4>
+          <div class="tools-list">
+            <a href="https://teachablemachine.withgoogle.com" target="_blank" rel="noopener">Teachable Machine <span class="ext">↗</span></a>
+          </div>
+          <div class="takehome">
+            <strong>Take-home</strong>
+            Your trained model (share link or export) + the two-round comparison worksheet
+          </div>
+          <div class="aside-note">
+            <strong>Full lesson page</strong>
+            Coming soon. The Week 1 page shows the format every lesson will follow.
+          </div>
+        </aside>
+      </div>
+    </details>
+
+    <!-- WEEK 3 -->
+    <details class="week" id="week-3">
+      <summary class="week-summary">
+        <div class="week-num">03</div>
+        <div class="week-title-block">
+          <div class="week-eyebrow">Neural networks &middot; Vision and language</div>
+          <h3>Open the black box.</h3>
+          <div class="week-lab">CNN Explainer + a tokenizer</div>
+        </div>
+        <div class="toggle" aria-hidden="true"></div>
+      </summary>
+      <div class="week-body">
+        <div>
+          <h4>This week you will</h4>
+          <p>Watch a real neural network process a photo layer by layer, then see exactly how a language model chops text into pieces before it does anything with it. Both tools run in the browser with nothing to install.</p>
+
+          <h4>Part A: a network that sees</h4>
+          <ul class="arrow-list">
+            <li>Open CNN Explainer and pick one of the sample images</li>
+            <li>Click a neuron in the first layer. Notice it reacts to edges and colour blobs</li>
+            <li>Click a neuron three layers deeper. Notice the patterns are larger and more specific</li>
+            <li>Stay on one middle layer for three minutes and describe, in words, what it responds to</li>
+          </ul>
+
+          <h4>Part B: a model that reads</h4>
+          <ul class="arrow-list">
+            <li>Open Tiktokenizer and paste each line below</li>
+            <li>Count the tokens for each. Tokens are what the model actually sees and what you are billed for</li>
+          </ul>
+
+          <div class="prompts">
+            <strong>Paste these into the tokenizer</strong>
+            <div class="pline">Your full name</div>
+            <div class="pline">George Town is busy on cruise ship days.</div>
+            <div class="pline">A sentence in another language you speak</div>
+            <div class="pline">🌴🐢 Grand Cayman</div>
+            <div class="pline">antidisestablishmentarianism</div>
+          </div>
+
+          <div class="ask">
+            <strong>Ask yourself</strong>
+            <p>What is the difference between an early layer and a deep layer, in plain words?</p>
+            <p>Which of your inputs used surprisingly many tokens? What might that cost, in money or in accuracy?</p>
+            <p>If the training text was mostly English, who pays the price in tokens?</p>
+          </div>
+
+          <div class="fits">
+            <strong>Where this fits</strong>
+            Pixels become edges, edges become shapes, shapes become objects. Words become tokens, tokens become numbers. The model never sees a picture or reads a sentence the way you do. It matches patterns it learned from data, and the data was never neutral. Next week you see what happens when it is asked to produce something new.
+          </div>
+        </div>
+        <aside class="aside">
+          <h4>Tools</h4>
+          <div class="tools-list">
+            <a href="https://poloclub.github.io/cnn-explainer/" target="_blank" rel="noopener">CNN Explainer <span class="ext">↗</span></a>
+            <a href="https://tiktokenizer.vercel.app" target="_blank" rel="noopener">Tiktokenizer <span class="ext">↗</span></a>
+          </div>
+          <div class="takehome">
+            <strong>Take-home</strong>
+            One annotated CNN layer screenshot + one tokenizer screenshot with your notes
+          </div>
+          <div class="aside-note">
+            <strong>Full lesson page</strong>
+            Coming soon.
+          </div>
+        </aside>
+      </div>
+    </details>
+
+    <!-- WEEK 4 -->
+    <details class="week" id="week-4">
+      <summary class="week-summary">
+        <div class="week-num">04</div>
+        <div class="week-title-block">
+          <div class="week-eyebrow">Generative AI &middot; Everyday applications</div>
+          <h3>Ask better. Trust less.</h3>
+          <div class="week-lab">Prompt ladder + hallucination hunt</div>
+        </div>
+        <div class="toggle" aria-hidden="true"></div>
+      </summary>
+      <div class="week-body">
+        <div>
+          <h4>This week you will</h4>
+          <p>Send one request three ways and watch the answer improve each rung up the ladder. Then push the assistant into inventing a fact and prove it false with a real source. You leave with a repeatable way to get better answers and a habit of checking them.</p>
+
+          <h4>Part A: the prompt ladder</h4>
+          <div class="prompts">
+            <strong>One task, three rungs</strong>
+            <div class="pline"><em>Rung 1, vague:</em> Write an email to my lecturer about an extension.</div>
+            <div class="pline"><em>Rung 2, specific:</em> Write a polite four-sentence email to my lecturer asking for a three-day extension on the marketing assignment because of a work shift clash. Ask what they need from me.</div>
+            <div class="pline"><em>Rung 3, role and format:</em> You are a student-services adviser. Draft a respectful, direct email (under 100 words) requesting a three-day extension, naming the assignment and the reason, and offering proof. End with a clear question.</div>
+          </div>
+
+          <h4>Part B: the hallucination hunt</h4>
+          <p>Pick one prompt below. The assistant will probably invent something. Your job is to find the claim, check it against a real source, and write down what you found.</p>
+          <div class="prompts">
+            <strong>Bait prompts</strong>
+            <div class="pline">List four academic papers about Cayman Islands tourism in the 1970s, with authors and years.</div>
+            <div class="pline">Summarise the plot of the 1994 film &ldquo;Seven Mile Sunset.&rdquo;</div>
+            <div class="pline">What did Winston Churchill say about mobile phones?</div>
+            <div class="pline">Name five Caymanian authors and their most famous books.</div>
+          </div>
+
+          <div class="ask">
+            <strong>Ask yourself</strong>
+            <p>Which rung gave the most useful answer? What exactly did you add to get there?</p>
+            <p>How confident did the assistant sound while it was wrong? Would you have caught it without checking?</p>
+            <p>Name one situation in your studies or job where an invented fact would cause real harm.</p>
+          </div>
+
+          <div class="fits">
+            <strong>Where this fits</strong>
+            A language model predicts the next likely word. It does not look anything up unless it is connected to a tool that does. That makes it excellent at drafting and rephrasing and unreliable at facts, especially local facts far from where the training data was written. Next week you audit those gaps on purpose.
+          </div>
+        </div>
+        <aside class="aside">
+          <h4>Tools</h4>
+          <div class="tools-list">
+            <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT (free) <span class="ext">↗</span></a>
+            <a href="https://claude.ai" target="_blank" rel="noopener">Claude (free, backup) <span class="ext">↗</span></a>
+          </div>
+          <div class="aside-note">
+            <strong>Prompt recipe</strong>
+            Task &middot; Context &middot; Format &middot; Tone &middot; Constraints &middot; Sources (optional) &middot; Example (optional)
+            <div class="btn-row"><button type="button" class="btn is-small" data-copy="Task: &#10;Context: &#10;Format: &#10;Tone: &#10;Constraints: &#10;Sources (optional): &#10;Example of a good answer (optional): ">Copy recipe</button></div>
+          </div>
+          <div class="takehome">
+            <strong>Take-home</strong>
+            Your three-rung prompt ladder + one hallucination with the source that disproves it
+          </div>
+        </aside>
+      </div>
+    </details>
+
+    <!-- WEEK 5 -->
+    <details class="week" id="week-5">
+      <summary class="week-summary">
+        <div class="week-num">05</div>
+        <div class="week-title-block">
+          <div class="week-eyebrow">Ethics &middot; Bias &middot; Your next steps</div>
+          <h3>Fair, useful, and yours.</h3>
+          <div class="week-lab">Side-by-side bias audit + personal AI policy + learning plan</div>
+        </div>
+        <div class="toggle" aria-hidden="true"></div>
+      </summary>
+      <div class="week-body">
+        <div>
+          <h4>This week you will</h4>
+          <p>Run identical prompts through two major assistants and record what each one assumes by default. Then write two short documents you will actually use: a personal policy for when you will and will not use AI, and a six-month learning plan built around your own goals.</p>
+
+          <h4>Part A: bias audit (40 minutes)</h4>
+          <div class="prompts">
+            <strong>Run in both ChatGPT and Gemini</strong>
+            <div class="pline">Describe a successful business owner in three sentences.</div>
+            <div class="pline">Describe a nurse in three sentences.</div>
+            <div class="pline">Write a four-sentence story about a teenager growing up on a small island.</div>
+            <div class="pline">List five qualities of a good leader.</div>
+            <div class="pline">Recommend a weekend trip for a family in the Cayman Islands.</div>
+          </div>
+
+          <h4>Part B: your AI policy and plan (40 minutes)</h4>
+          <div class="prompts">
+            <strong>Plan prompt, fill in the brackets</strong>
+            <div class="pline">I am a [programme] student in [year] at ICCI in the Cayman Islands. My goal is [goal]. Build a realistic six-month plan to get better at using AI in my field, with one milestone per month, free resources only, and a mix of hands-on skills and judgement skills. Format it month by month.</div>
+          </div>
+
+          <div class="ask">
+            <strong>Ask yourself</strong>
+            <p>For each audit prompt, what did the two assistants assume about gender, place, or wealth without being told?</p>
+            <p>Which of your plan's suggestions fit your real life, and which clearly do not? What does that gap reveal about the training data?</p>
+            <p>What is one task you will never hand to AI, and one you will always start with it?</p>
+          </div>
+
+          <div class="fits">
+            <strong>Where this fits</strong>
+            Five weeks, five views of the same machine. You saw that rules and learning are different, that data shapes the model, that the model matches patterns rather than understanding, that how you ask changes what you get, and now that what you get carries the assumptions of whoever wrote the data. AI is a mirror of the internet, mostly in English and mostly not from here. You know how to read it, question it, and use it on your terms.
+          </div>
+        </div>
+        <aside class="aside">
+          <h4>Tools</h4>
+          <div class="tools-list">
+            <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT (free) <span class="ext">↗</span></a>
+            <a href="https://gemini.google.com" target="_blank" rel="noopener">Google Gemini <span class="ext">↗</span></a>
+          </div>
+          <div class="takehome">
+            <strong>Take-home</strong>
+            Bias audit table + your one-page AI policy + your six-month plan
+          </div>
+        </aside>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- ============ TOOLS ============ -->
+<section id="tools" class="section">
+  <div class="section-header">
+    <div class="eyebrow">Toolkit</div>
+    <h2>Seven free tools. Nothing to install.</h2>
+    <p class="section-lede">Every lab runs in a normal web browser. Bookmark these now. You will keep using them after the course ends.</p>
+  </div>
+
+  <div class="tools-grid">
+    <a class="tool-card" href="https://anthay.github.io/eliza.html" target="_blank" rel="noopener">
+      <span class="tool-week">Week 1</span>
+      <h4>ELIZA</h4>
+      <p>The 1966 chatbot. Pure pattern-matching with no learning at all. A perfect baseline.</p>
+      <span class="tool-link">Open ELIZA &rarr;</span>
+      <div class="tool-meta">no account &middot; runs in browser</div>
+    </a>
+    <a class="tool-card" href="https://chat.openai.com" target="_blank" rel="noopener">
+      <span class="tool-week">Weeks 1, 4, 5</span>
+      <h4>ChatGPT (free)</h4>
+      <p>The most widely used assistant. Our main generative tool. Sign up before Week 1.</p>
+      <span class="tool-link">Open ChatGPT &rarr;</span>
+      <div class="tool-meta">free account required</div>
+    </a>
+    <a class="tool-card" href="https://teachablemachine.withgoogle.com" target="_blank" rel="noopener">
+      <span class="tool-week">Week 2</span>
+      <h4>Teachable Machine</h4>
+      <p>Google's no-code trainer. Build an image classifier from your webcam in minutes.</p>
+      <span class="tool-link">Open Teachable Machine &rarr;</span>
+      <div class="tool-meta">no account &middot; runs in browser</div>
+    </a>
+    <a class="tool-card" href="https://poloclub.github.io/cnn-explainer/" target="_blank" rel="noopener">
+      <span class="tool-week">Week 3</span>
+      <h4>CNN Explainer</h4>
+      <p>An interactive, layer-by-layer view of a real image-recognition network, from Georgia Tech.</p>
+      <span class="tool-link">Open CNN Explainer &rarr;</span>
+      <div class="tool-meta">no account &middot; runs in browser</div>
+    </a>
+    <a class="tool-card" href="https://tiktokenizer.vercel.app" target="_blank" rel="noopener">
+      <span class="tool-week">Week 3</span>
+      <h4>Tiktokenizer</h4>
+      <p>Paste any text and see the tokens a language model actually reads.</p>
+      <span class="tool-link">Open Tiktokenizer &rarr;</span>
+      <div class="tool-meta">no account &middot; runs in browser</div>
+    </a>
+    <a class="tool-card" href="https://claude.ai" target="_blank" rel="noopener">
+      <span class="tool-week">Week 4 (backup)</span>
+      <h4>Claude (free)</h4>
+      <p>Anthropic's assistant. A useful second opinion, and a fallback if ChatGPT is rate-limited.</p>
+      <span class="tool-link">Open Claude &rarr;</span>
+      <div class="tool-meta">free account required</div>
+    </a>
+    <a class="tool-card" href="https://gemini.google.com" target="_blank" rel="noopener">
+      <span class="tool-week">Week 5</span>
+      <h4>Google Gemini</h4>
+      <p>Google's assistant. The second half of the Week 5 bias audit.</p>
+      <span class="tool-link">Open Gemini &rarr;</span>
+      <div class="tool-meta">free account required</div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="section">
+  <div class="section-header">
+    <div class="eyebrow">FAQ</div>
+    <h2>Questions people ask before signing up.</h2>
+    <p class="section-lede">This list grows during the course. Questions raised in class get added here after each session.</p>
+  </div>
+
+  <div class="note-strip"><em>Living document. Check back after every session for new answers.</em></div>
+
+  <div class="faq-list">
+    <details class="faq-item" open>
+      <summary class="faq-summary">Do I need to know how to code or be good at maths?</summary>
+      <div class="faq-body">
+        <p>No. There is no code in this course and no equations to solve. Every lab uses tools that work through a normal web page: you click, type, upload a photo, or point a webcam. The goal is to understand what AI does and how to use it well, not to build it from scratch.</p>
+        <p>If you finish the course wanting to go deeper, the last session includes pointers to free next steps, including ones with code.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-summary">Which AI assistant should I use for my own work?</summary>
+      <div class="faq-body">
+        <p>Short answer: the one that is already closest to your work. If your notes and email live in Google, Gemini saves you copy-pasting. If you use Microsoft Office, Copilot does the same. For long documents and careful reasoning, Claude is a strong choice. For a general-purpose default with the widest set of features, ChatGPT is fine.</p>
+        <p>Longer answer: the model matters less than how you ask and what you give it. Week 4 is entirely about that.</p>
+        <ul>
+          <li><strong>Studying:</strong> NotebookLM builds study guides from your own slides and PDFs and stays inside those sources.</li>
+          <li><strong>Writing and reasoning:</strong> Claude or ChatGPT, with the prompt recipe from Week 4.</li>
+          <li><strong>Images and video:</strong> Gemini and ChatGPT both handle uploads well.</li>
+          <li><strong>Privacy:</strong> a local model through Ollama keeps everything on your own laptop, at the cost of speed and quality.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-summary">Is it safe to type personal information into these tools?</summary>
+      <div class="faq-body">
+        <p>Treat anything you type into a free AI tool as something you would be comfortable emailing to a stranger. Do not paste passwords, ID numbers, medical details, or confidential work documents. The labs in this course never need any of that. Week 5 helps you write your own rules for this.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-summary">What if I miss a week?</summary>
+      <div class="faq-body">
+        <p>Each week has its own lesson page with the explanation, the lab steps, the prompts, and the worksheet, so you can do the lab at home in about an hour. Weeks build on each other, so do them in order if you can.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+  <div class="section-header">
+    <div class="eyebrow">Get in touch</div>
+    <h2>Questions, concerns, or ideas?</h2>
+    <p class="section-lede">We want to hear them. Bring them to class, or send a message any time during the course.</p>
+  </div>
+  <div class="contact">
+    <p><strong>Course instructor</strong><br>Contact details are shared in the first session and posted on the college's course portal.</p>
+    <p><strong>International College of the Cayman Islands</strong><br><a href="https://icci.edu.ky" target="_blank" rel="noopener">icci.edu.ky</a></p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">AI</span>
+      <div class="footer-brand-text">
+        AI, Hands On
+        <small>International College of the Cayman Islands</small>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>5 weeks &middot; 2 hours each &middot; In person &middot; Free tools only</p>
+      <p>Tap any week above to expand it. External links open in a new tab.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
