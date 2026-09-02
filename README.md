@@ -12,13 +12,11 @@ script, with no build step, designed to be served by GitHub Pages.
 | Path | What it is |
 |---|---|
 | `index.html` | Course landing page: overview, pre-flight checklist, journey map, five weekly labs, tools, useful courses with LinkedIn badges, articles worth reading, contact |
-| `lessons/week-1.html` | Full Week 1 lesson: objectives, timed session plan, warm-up, reading, ELIZA vs ChatGPT lab, worksheets, quiz, instructor notes |
 | `assets/css/site.css` | Shared stylesheet for every page |
-| `assets/js/site.js` | Mobile menu, copy buttons, quiz, progress checklist, on-page nav |
-| `DESIGN.md` | Review of the reference site, the design system, and the template for new lesson pages |
+| `assets/js/site.js` | Mobile menu, copy buttons, accordion deep links |
+| `DESIGN.md` | Review of the reference site and the design system |
 
-Weeks 2 to 5 are summarised on the landing page. Their full lesson pages
-follow the Week 1 template (see `DESIGN.md`).
+All five weeks are summarised in the collapsible labs on the landing page.
 
 ## Publishing on GitHub Pages
 

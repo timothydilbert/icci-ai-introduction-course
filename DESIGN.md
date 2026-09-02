@@ -56,7 +56,6 @@ GitHub Pages from the repository root.
 
 ```
 index.html              Landing page (same skeleton as the reference)
-lessons/week-1.html     Full lesson page, the template for the other four
 assets/css/site.css     Shared stylesheet, sectioned and tokenised
 assets/js/site.js       Shared progressive-enhancement script
 .nojekyll               Tells GitHub Pages to serve files as-is
@@ -74,57 +73,20 @@ chips, the tool cards, native `<details>` everywhere.
 - A `.brand-mark` inline monogram replaces the hot-linked logo.
 - The journey steps are links that open the matching week accordion (the
   script opens a `<details>` named in the URL hash).
-- Week 1 has a "Open the full lesson" button; other weeks say "coming soon"
-  until their pages exist.
 - The FAQ section was dropped; the reference's "Advanced topics" was not carried over.
 - A "Useful courses with LinkedIn badges" section for outside courses, using the tool-card grid.
 - Accessibility: skip link, `aria-expanded` on the menu button, visible focus
   rings, `<main>` landmark.
 
-## 3. The lesson page template
+## 3. Lesson pages
 
-`lessons/week-1.html` is the model for Weeks 2 to 5. Every lesson page has
-the same parts, in this order:
-
-1. **Lesson hero** — eyebrow "Week N of 5 · topic", title with one italic
-   accent, two-sentence lede, chips (duration, device, tools, no coding).
-2. **Objectives** — three or four "you can…" statements, each testable.
-3. **Session plan** — a timed list covering the full two hours, each row tagged
-   Watch / Try / Adjust / Reflect. Include the break.
-4. **Part 1 · Warm-up** — short activity with a worksheet (`.worksheet`).
-5. **Part 2 · Watch** — the explanation, in `.reading` prose, with one SVG
-   figure (`figure.fig`), a key-terms grid (`dl.terms`) and, if useful, a
-   comparison table (`table.compare`).
-6. **Part 3 · Try** — numbered `.steps`, a `.prompts` block with a copy
-   button, and the main worksheet.
-7. **Adjust** — one deliberate change to the lab and what to look for.
-8. **Part 4 · Reflect** — `.ask` questions, a four-question `.quiz`, the
-   `.fits` block that connects to the course arc, and the take-home callout.
-9. **Instructor notes** — the dark `.instructor` card: set-up, timing traps,
-   discussion prompts, what good looks like.
-10. **Sidebar** — progress checklist (saved in `localStorage` under
-    `progress:week-N`), on-this-page links, tools, take-home, print button.
-11. **Pager** — back to the overview, forward to the next week.
-
-Rules of thumb:
-
-- Every step a student takes should produce something they can keep. Name it
-  in the take-home callout and in the sidebar.
-- Prompts are copied exactly. Put them in a `.prompts` block with an `id` and a
-  `data-copy-from="#id"` button; the script joins each `.pline` with newlines.
-- Use the three colour blocks for the same meaning every time: dark = paste
-  this, orange = think about this, blue = how this connects.
-- Keep local references (George Town, Cayman Brac, cruise ship days). They make
-  the hallucination and bias lessons land.
-- Worksheets must print: the page has a print stylesheet that hides the nav,
-  sidebar and instructor card and gives fill cells more height.
+The site currently has no standalone lesson pages; each week lives in its
+accordion on the landing page. The stylesheet still carries the lesson-page
+components (`.lesson-hero`, `.plan`, `.steps`, `.worksheet`, `.quiz`,
+`.instructor`, `.progress`) and the script still supports the quiz and
+progress checklist, so a lesson page can be added later without new CSS.
 
 ## 4. Adding things
-
-**A new lesson page:** copy `lessons/week-1.html`, change the hero, the
-`data-progress-key`, the checklist ids, and the pager links, then swap the
-content. On the landing page, replace the week's "coming soon" note with an
-"Open the full lesson" button.
 
 **A course to "Useful courses with LinkedIn badges":** copy one `.tool-card` in the `#courses`
 section of `index.html`. Badge = provider, title = course name, one-line
