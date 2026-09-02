@@ -46,7 +46,7 @@
   <p class="hero-pitch">
     <strong>Five weeks. Two hours a week. No coding, no maths, no prerequisites.</strong>
     Every session pairs a short explanation with a lab you do yourself: teach a machine to see,
-    watch a neural network think, make a chatbot invent facts and then catch it, and finish with
+    find out who keeps what you type, make a chatbot invent facts and then catch it, and finish with
     a plan for using AI in your own studies and work.
   </p>
   <div class="chips">
@@ -62,7 +62,7 @@
     <ul class="build-list">
       <li><span class="check">1</span><div>A one-page &ldquo;AI around me&rdquo; audit of the apps you already use<span class="when">Week 1</span></div></li>
       <li><span class="check">2</span><div>An image classifier you trained, broke, and fixed yourself<span class="when">Week 2</span></div></li>
-      <li><span class="check">3</span><div>Annotated screenshots of a neural network seeing and an AI reading<span class="when">Week 3</span></div></li>
+      <li><span class="check">3</span><div>A privacy comparison of Claude, ChatGPT and Grok, plus your own settings set the way you want them<span class="when">Week 3</span></div></li>
       <li><span class="check">4</span><div>A prompt ladder (three versions of one request) and one hallucination you proved false<span class="when">Week 4</span></div></li>
       <li><span class="check">5</span><div>A side-by-side bias audit of two major AI assistants<span class="when">Week 5</span></div></li>
       <li><span class="check">6</span><div>Your personal AI use policy and a six-month learning plan<span class="when">Week 5</span></div></li>
@@ -97,6 +97,13 @@
       <li>
         <span class="box"></span>
         <div>
+          <strong>Create free Claude and Grok accounts</strong>
+          <span>Go to claude.ai and grok.com and sign up. Used in Week 3 to compare privacy settings side by side.</span>
+        </div>
+      </li>
+      <li>
+        <span class="box"></span>
+        <div>
           <strong>Bring a laptop if you have one</strong>
           <span>A phone works for most labs. Week 2 uses a webcam, so a laptop is best. We will pair people up if needed.</span>
         </div>
@@ -126,7 +133,7 @@
     <h2>One story, told in five parts.</h2>
     <p class="section-lede">
       AI starts with <strong>data</strong>, which is used to <strong>train a model</strong>, which
-      <strong>recognises patterns</strong>, which lets it <strong>generate</strong> new things, which
+      <strong>collects what you type</strong> to train the next one, which lets it <strong>generate</strong> new things, which
       <strong>people</strong> then have to use wisely. Each week is one chapter of that story.
     </p>
   </div>
@@ -153,8 +160,8 @@
         <div class="num">3</div>
         <div class="journey-step-text">
           <div class="label">Week 3</div>
-          <div class="title">Inside the model</div>
-          <div class="desc">Layers, tokens, patterns</div>
+          <div class="title">Your data, their model</div>
+          <div class="desc">Privacy across three assistants</div>
         </div>
       </a>
       <a class="journey-step" href="#week-4">
@@ -283,7 +290,7 @@
 
           <div class="fits">
             <strong>Where this fits</strong>
-            You just ran the whole supervised-learning loop: collect examples, label them, train, test. You also felt &ldquo;garbage in, garbage out&rdquo; first-hand. Next week you open a much bigger model and look at what the training actually built inside it.
+            You just ran the whole supervised-learning loop: collect examples, label them, train, test. You also felt &ldquo;garbage in, garbage out&rdquo; first-hand. Next week you find out where the training data for the big models comes from, and whether your own chats are part of it.
           </div>
         </div>
         <aside class="aside">
@@ -304,61 +311,90 @@
       <summary class="week-summary">
         <div class="week-num">03</div>
         <div class="week-title-block">
-          <div class="week-eyebrow">Neural networks &middot; Vision and language</div>
-          <h3>Open the black box.</h3>
-          <div class="week-lab">CNN Explainer + a tokenizer</div>
+          <div class="week-eyebrow">Privacy &middot; Your data &middot; Terms of service</div>
+          <h3>Who keeps what you type?</h3>
+          <div class="week-lab">Privacy audit of Claude, ChatGPT and Grok</div>
         </div>
         <div class="toggle" aria-hidden="true"></div>
       </summary>
       <div class="week-body">
         <div>
           <h4>This week you will</h4>
-          <p>Watch a real neural network process a photo layer by layer, then see exactly how a language model chops text into pieces before it does anything with it. Both tools run in the browser with nothing to install.</p>
+          <p>Find out what happens to a conversation after you press send. You will open the privacy settings of three assistants, Claude (Anthropic), ChatGPT (OpenAI) and Grok (xAI), answer the same four questions about each, and leave with every setting switched the way you want it. Same kind of product, three different answers.</p>
 
-          <h4>Part A: a network that sees</h4>
+          <h4>The four questions</h4>
           <ul class="arrow-list">
-            <li>Open CNN Explainer and pick one of the sample images</li>
-            <li>Click a neuron in the first layer. Notice it reacts to edges and colour blobs</li>
-            <li>Click a neuron three layers deeper. Notice the patterns are larger and more specific</li>
-            <li>Stay on one middle layer for three minutes and describe, in words, what it responds to</li>
+            <li><strong>Training:</strong> are my chats used to train future models by default, and can I turn that off?</li>
+            <li><strong>Retention:</strong> how long are my chats kept, and what happens when I delete one?</li>
+            <li><strong>Private mode:</strong> is there a temporary or incognito chat that is never used for training?</li>
+            <li><strong>Reach:</strong> who else can see a chat: the company's reviewers, a shared link, a search engine, my employer or school?</li>
           </ul>
 
-          <h4>Part B: a model that reads</h4>
+          <h4>Part A: read the settings (40 minutes)</h4>
           <ul class="arrow-list">
-            <li>Open Tiktokenizer and paste each line below</li>
-            <li>Count the tokens for each. Tokens are what the model actually sees and what you are billed for</li>
+            <li><strong>ChatGPT:</strong> Settings &rarr; Data Controls. Find &ldquo;Improve the model for everyone&rdquo; and the Temporary Chat option</li>
+            <li><strong>Claude:</strong> Settings &rarr; Privacy. Find &ldquo;Help improve Claude&rdquo; and the retention period it changes. Find incognito chat</li>
+            <li><strong>Grok:</strong> on grok.com, Settings &rarr; Data. Find &ldquo;Improve the model&rdquo; and Private Chat. Then on X, Settings &rarr; Privacy and safety &rarr; Grok &amp; Third-party Collaborators (sometimes labelled &ldquo;Data sharing&rdquo;)</li>
+            <li>Fill in one column of the worksheet per assistant. Quote the setting's own wording, not your memory of it</li>
           </ul>
 
+          <h4>Part B: ask the assistant, then check (20 minutes)</h4>
+          <p>Send the prompts below to all three. Then compare each answer with what you found in the settings. An assistant does not always know its own company's policy, which is a Week 4 lesson arriving early.</p>
           <div class="prompts">
-            <strong>Paste these into the tokenizer</strong>
-            <div class="pline">Your full name</div>
-            <div class="pline">George Town is busy on cruise ship days.</div>
-            <div class="pline">A sentence in another language you speak</div>
-            <div class="pline">🌴🐢 Grand Cayman</div>
-            <div class="pline">antidisestablishmentarianism</div>
+            <strong>Send to all three</strong>
+            <div class="pline">Is this conversation used to train future versions of you? Where exactly do I turn that off?</div>
+            <div class="pline">How long do you keep this chat after I delete it?</div>
+            <div class="pline">What do you already remember about me from earlier conversations?</div>
           </div>
+
+          <h4>Part C: set it your way (10 minutes)</h4>
+          <ul class="arrow-list">
+            <li>Decide, for each assistant, whether you want your chats used for training. There is no wrong answer, but it should be your answer</li>
+            <li>Change the settings. Screenshot each settings page as you leave it</li>
+            <li>Try the private or temporary mode in each one so you know where it is when you need it</li>
+          </ul>
+
+          <h4>Snapshot at the time of writing (check it, it changes)</h4>
+          <ul class="arrow-list">
+            <li><strong>ChatGPT (free and Plus):</strong> training on your chats is on by default; switch it off under Data Controls. Deleted chats are removed within about 30 days. Temporary Chats are not used for training and are kept for 30 days for safety review</li>
+            <li><strong>Claude (free, Pro, Max):</strong> you are asked to choose. With &ldquo;Help improve Claude&rdquo; on, chats can be kept for up to five years and used for training; with it off, they are kept for 30 days and not used. Incognito chats are never used</li>
+            <li><strong>Grok:</strong> on X, sharing your posts and Grok chats for training is on by default; on grok.com the &ldquo;Improve the model&rdquo; setting controls chats, and Private Chats are deleted within 30 days. Sources disagree on the grok.com default, so read the page in front of you</li>
+            <li><strong>All three:</strong> business and education accounts usually do not train on your data by default. Consumer accounts are a different deal</li>
+          </ul>
 
           <div class="ask">
             <strong>Ask yourself</strong>
-            <p>What is the difference between an early layer and a deep layer, in plain words?</p>
-            <p>Which of your inputs used surprisingly many tokens? What might that cost, in money or in accuracy?</p>
-            <p>If the training text was mostly English, who pays the price in tokens?</p>
+            <p>Which default surprised you most? Would you have found it without being told where to look?</p>
+            <p>In 2025, chats that people had &ldquo;shared&rdquo; from both ChatGPT and Grok turned up in Google search results. What is the difference between private, shared, and public, and how would you tell which one you are in?</p>
+            <p>Name one thing you have already typed into an assistant that you would not want a stranger, an employer, or a court to read. What will you do differently?</p>
+            <p>Why might a company want training to be on by default? Why might another want you to choose?</p>
           </div>
 
           <div class="fits">
             <strong>Where this fits</strong>
-            Pixels become edges, edges become shapes, shapes become objects. Words become tokens, tokens become numbers. The model never sees a picture or reads a sentence the way you do. It matches patterns it learned from data, and the data was never neutral. Next week you see what happens when it is asked to produce something new.
+            Week 2 showed you that a model is made of its training data. This week you found out that your own conversations can be that data, and that whether they are depends on a setting most people never open. The three companies made three different choices about the default. Knowing where the switch is, and what it changes, is the most practical privacy skill in this course. Next week you look at what the model does with your words once it has them.
           </div>
         </div>
         <aside class="aside">
           <h4>Tools</h4>
           <div class="tools-list">
-            <a href="https://poloclub.github.io/cnn-explainer/" target="_blank" rel="noopener">CNN Explainer <span class="ext">↗</span></a>
-            <a href="https://tiktokenizer.vercel.app" target="_blank" rel="noopener">Tiktokenizer <span class="ext">↗</span></a>
+            <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT (free) <span class="ext">↗</span></a>
+            <a href="https://claude.ai" target="_blank" rel="noopener">Claude (free) <span class="ext">↗</span></a>
+            <a href="https://grok.com" target="_blank" rel="noopener">Grok (free) <span class="ext">↗</span></a>
+          </div>
+          <h4 style="margin-top:16px;">Policy pages</h4>
+          <div class="tools-list">
+            <a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener">OpenAI: data controls <span class="ext">↗</span></a>
+            <a href="https://privacy.claude.com" target="_blank" rel="noopener">Anthropic: privacy center <span class="ext">↗</span></a>
+            <a href="https://x.ai/legal/privacy-policy" target="_blank" rel="noopener">xAI: privacy policy <span class="ext">↗</span></a>
+          </div>
+          <div class="aside-note">
+            <strong>Worksheet</strong>
+            One row per question (training, retention, private mode, reach), one column per assistant. Add a final row: &ldquo;My setting, and why.&rdquo;
           </div>
           <div class="takehome">
             <strong>Take-home</strong>
-            One annotated CNN layer screenshot + one tokenizer screenshot with your notes
+            The completed comparison table + screenshots of your three settings pages after you changed them
           </div>
         </aside>
       </div>
@@ -470,7 +506,7 @@
 
           <div class="fits">
             <strong>Where this fits</strong>
-            Five weeks, five views of the same machine. You saw that rules and learning are different, that data shapes the model, that the model matches patterns rather than understanding, that how you ask changes what you get, and now that what you get carries the assumptions of whoever wrote the data. AI is a mirror of the internet, mostly in English and mostly not from here. You know how to read it, question it, and use it on your terms.
+            Five weeks, five views of the same machine. You saw that rules and learning are different, that data shapes the model, that what you type can become training data unless you say otherwise, that how you ask changes what you get, and now that what you get carries the assumptions of whoever wrote the data. AI is a mirror of the internet, mostly in English and mostly not from here. You know how to read it, question it, and use it on your terms.
           </div>
         </div>
         <aside class="aside">
@@ -494,7 +530,7 @@
 <section id="tools" class="section">
   <div class="section-header">
     <div class="eyebrow">Toolkit</div>
-    <h2>Seven free tools. Nothing to install.</h2>
+    <h2>Six free tools. Nothing to install.</h2>
     <p class="section-lede">Every lab runs in a normal web browser. Bookmark these now. You will keep using them after the course ends.</p>
   </div>
 
@@ -507,7 +543,7 @@
       <div class="tool-meta">no account &middot; runs in browser</div>
     </a>
     <a class="tool-card" href="https://chat.openai.com" target="_blank" rel="noopener">
-      <span class="tool-week">Weeks 1, 4, 5</span>
+      <span class="tool-week">Weeks 1, 3, 4, 5</span>
       <h4>ChatGPT (free)</h4>
       <p>The most widely used assistant. Our main generative tool. Sign up before Week 1.</p>
       <span class="tool-link">Open ChatGPT &rarr;</span>
@@ -520,24 +556,10 @@
       <span class="tool-link">Open Teachable Machine &rarr;</span>
       <div class="tool-meta">no account &middot; runs in browser</div>
     </a>
-    <a class="tool-card" href="https://poloclub.github.io/cnn-explainer/" target="_blank" rel="noopener">
-      <span class="tool-week">Week 3</span>
-      <h4>CNN Explainer</h4>
-      <p>An interactive, layer-by-layer view of a real image-recognition network, from Georgia Tech.</p>
-      <span class="tool-link">Open CNN Explainer &rarr;</span>
-      <div class="tool-meta">no account &middot; runs in browser</div>
-    </a>
-    <a class="tool-card" href="https://tiktokenizer.vercel.app" target="_blank" rel="noopener">
-      <span class="tool-week">Week 3</span>
-      <h4>Tiktokenizer</h4>
-      <p>Paste any text and see the tokens a language model actually reads.</p>
-      <span class="tool-link">Open Tiktokenizer &rarr;</span>
-      <div class="tool-meta">no account &middot; runs in browser</div>
-    </a>
     <a class="tool-card" href="https://claude.ai" target="_blank" rel="noopener">
-      <span class="tool-week">Week 4 (backup)</span>
+      <span class="tool-week">Weeks 3, 4</span>
       <h4>Claude (free)</h4>
-      <p>Anthropic's assistant. A useful second opinion, and a fallback if ChatGPT is rate-limited.</p>
+      <p>Anthropic's assistant. Part of the Week 3 privacy audit, and a fallback if ChatGPT is rate-limited.</p>
       <span class="tool-link">Open Claude &rarr;</span>
       <div class="tool-meta">free account required</div>
     </a>
@@ -546,6 +568,13 @@
       <h4>Google Gemini</h4>
       <p>Google's assistant. The second half of the Week 5 bias audit.</p>
       <span class="tool-link">Open Gemini &rarr;</span>
+      <div class="tool-meta">free account required</div>
+    </a>
+    <a class="tool-card" href="https://grok.com" target="_blank" rel="noopener">
+      <span class="tool-week">Week 3</span>
+      <h4>Grok (free)</h4>
+      <p>xAI's assistant, also built into X. The third column of the Week 3 privacy audit.</p>
+      <span class="tool-link">Open Grok &rarr;</span>
       <div class="tool-meta">free account required</div>
     </a>
   </div>
