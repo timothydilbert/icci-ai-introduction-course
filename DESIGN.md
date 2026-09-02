@@ -76,6 +76,7 @@ chips, the tool cards, native `<details>` everywhere.
   script opens a `<details>` named in the URL hash).
 - Week 1 has a "Open the full lesson" button; other weeks say "coming soon"
   until their pages exist.
+- The FAQ section was dropped; the reference's "Advanced topics" was not carried over.
 - A "Useful courses with LinkedIn badges" section for outside courses, using the tool-card grid.
 - Accessibility: skip link, `aria-expanded` on the menu button, visible focus
   rings, `<main>` landmark.
