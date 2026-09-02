@@ -129,6 +129,9 @@ content. On the landing page, replace the week's "coming soon" note with an
 section of `index.html`. Badge = provider, title = course name, one-line
 description, and a meta line for cost or account requirements.
 
+**An article to "Articles worth reading":** same card pattern in the `#articles`
+section. Badge = publisher, meta line = cost and reading time.
+
 **A tool:** same as a course, in the `#tools` section, with the week badge.
 
 ## 5. Publishing

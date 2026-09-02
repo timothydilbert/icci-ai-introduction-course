@@ -11,7 +11,7 @@ script, with no build step, designed to be served by GitHub Pages.
 
 | Path | What it is |
 |---|---|
-| `index.html` | Course landing page: overview, pre-flight checklist, journey map, five weekly labs, tools, useful courses with LinkedIn badges, FAQ, contact |
+| `index.html` | Course landing page: overview, pre-flight checklist, journey map, five weekly labs, tools, useful courses with LinkedIn badges, articles worth reading, FAQ, contact |
 | `lessons/week-1.html` | Full Week 1 lesson: objectives, timed session plan, warm-up, reading, ELIZA vs ChatGPT lab, worksheets, quiz, instructor notes |
 | `assets/css/site.css` | Shared stylesheet for every page |
 | `assets/js/site.js` | Mobile menu, copy buttons, quiz, progress checklist, on-page nav |
