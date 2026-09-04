@@ -46,13 +46,13 @@
   <p class="hero-pitch">
     <strong>Five weeks. Two hours a week. No coding. No prerequisites.</strong>
     Every session pairs a short explanation with a lab you do yourself: teach a machine to see,
-    find out who keeps what you type, make a chatbot invent facts and then catch it, and finish with
+    find out who keeps what you type, watch an AI agent build a whole project on its own, and finish with
     a plan for using AI in your own studies and work.
   </p>
   <div class="chips">
     <span class="chip"><span class="dot"></span>5 weeks &middot; 10 hours total</span>
     <span class="chip is-orange"><span class="dot"></span>Half explanation, half lab</span>
-    <span class="chip is-yellow"><span class="dot"></span>Free browser tools only</span>
+    <span class="chip is-yellow"><span class="dot"></span>Free browser tools, plus one live demo</span>
   </div>
 
   <!-- WHAT YOU'LL LEAVE WITH -->
@@ -63,7 +63,7 @@
       <li><span class="check">1</span><div>A one-page &ldquo;AI around me&rdquo; audit of the apps you already use<span class="when">Week 1</span></div></li>
       <li><span class="check">2</span><div>An image classifier you trained, broke, and fixed yourself<span class="when">Week 2</span></div></li>
       <li><span class="check">3</span><div>A privacy comparison of Claude, ChatGPT and Grok, plus your own settings set the way you want them<span class="when">Week 3</span></div></li>
-      <li><span class="check">4</span><div>A prompt ladder (three versions of one request) and one hallucination you proved false<span class="when">Week 4</span></div></li>
+      <li><span class="check">4</span><div>An observation log of an AI agent building a project unattended, and the follow-up instruction you wrote for it<span class="when">Week 4</span></div></li>
       <li><span class="check">5</span><div>A side-by-side bias audit of two major AI assistants<span class="when">Week 5</span></div></li>
       <li><span class="check">6</span><div>Your personal AI use policy and a six-month learning plan<span class="when">Week 5</span></div></li>
     </ul>
@@ -84,7 +84,7 @@
         <span class="box"></span>
         <div>
           <strong>Create a free ChatGPT account</strong>
-          <span>Go to chat.openai.com and sign up with any email. Used in Weeks 1, 4 and 5.</span>
+          <span>Go to chat.openai.com and sign up with any email. Used in Weeks 1 and 5.</span>
         </div>
       </li>
       <li>
@@ -168,8 +168,8 @@
         <div class="num">4</div>
         <div class="journey-step-text">
           <div class="label">Week 4</div>
-          <div class="title">Models generate</div>
-          <div class="desc">Prompting and hallucination</div>
+          <div class="title">Models act</div>
+          <div class="desc">An AI agent writes the code</div>
         </div>
       </a>
       <a class="journey-step" href="#week-5">
@@ -325,7 +325,7 @@
           </ul>
 
           <h4>Ask the assistant, then check (20 minutes)</h4>
-          <p>Send the prompts below to all three. Then compare each answer with what you found in the settings. An assistant does not always know its own company's policy, which is a Week 4 lesson arriving early.</p>
+          <p>Send the prompts below to all three. Then compare each answer with what you found in the settings. An assistant does not always know its own company's policy. Check, do not trust.</p>
           <div class="prompts">
             <strong>Send to all three</strong>
             <div class="pline">Is this conversation used to train future versions of you? Where exactly do I turn that off?</div>
@@ -351,7 +351,7 @@
 
           <div class="fits">
             <strong>Where this fits</strong>
-            Week 2 showed you that a model is made of its training data. This week you found out that your own conversations can be that data, and that whether they are depends on a setting most people never open. The three companies made three different choices about the default. Knowing where the switch is, and what it changes, is the most practical privacy skill in this course. Next week you look at what the model does with your words once it has them.
+            Week 2 showed you that a model is made of its training data. This week you found out that your own conversations can be that data, and that whether they are depends on a setting most people never open. The three companies made three different choices about the default. Knowing where the switch is, and what it changes, is the most practical privacy skill in this course. Next week the model stops answering and starts doing: you watch it write and run code by itself on a machine set up just for that.
           </div>
         </div>
         <aside class="aside">
@@ -376,61 +376,98 @@
       <summary class="week-summary">
         <div class="week-num">04</div>
         <div class="week-title-block">
-          <div class="week-eyebrow">Generative AI &middot; Everyday applications</div>
-          <h3>Ask better. Trust less.</h3>
-          <div class="week-lab">Prompt ladder + hallucination hunt</div>
+          <div class="week-eyebrow">Agentic AI &middot; Coding assistants &middot; Live demo</div>
+          <h3>Hand it the keyboard.</h3>
+          <div class="week-lab">Claude Code builds an open-source project on a fresh VM while you watch</div>
         </div>
         <div class="toggle" aria-hidden="true"></div>
       </summary>
       <div class="week-body">
         <div>
           <h4>This week you will</h4>
-          <p>Send one request three ways and watch the answer improve each rung up the ladder. Then push the assistant into inventing a fact and prove it false with a real source. You leave with a repeatable way to get better answers and a habit of checking them.</p>
+          <p>See the difference between an AI that answers and an AI that acts. The instructor sets up a brand-new virtual machine, installs Claude Code (Anthropic&rsquo;s coding agent that runs in a terminal), points it at an empty folder, and gives it one instruction to scaffold an open-source project. Then it runs on its own for several minutes: planning, creating files, running commands, hitting errors and fixing them. Your job is to watch closely, record what it does, and write the instruction that comes next.</p>
+          <p>Nothing to install on your side. This session is a guided demo on the projector, with a short exercise you do on paper or in your notes.</p>
 
-          <h4>Part A: the prompt ladder</h4>
-          <div class="prompts">
-            <strong>One task, three rungs</strong>
-            <div class="pline"><em>Rung 1, vague:</em> Write an email to my lecturer about an extension.</div>
-            <div class="pline"><em>Rung 2, specific:</em> Write a polite four-sentence email to my lecturer asking for a three-day extension on the marketing assignment because of a work shift clash. Ask what they need from me.</div>
-            <div class="pline"><em>Rung 3, role and format:</em> You are a student-services adviser. Draft a respectful, direct email (under 100 words) requesting a three-day extension, naming the assignment and the reason, and offering proof. End with a clear question.</div>
+          <h4>Part A: provision the machine (watch, 20 min)</h4>
+          <ul class="arrow-list">
+            <li>The instructor creates a fresh Linux VM (a cloud instance or a local one) with nothing on it</li>
+            <li>Why a dedicated VM: the agent can create, edit and delete files and run any command. A throwaway machine means nothing you care about is at risk, and nothing private is on it. Week 3 in practice</li>
+            <li>Install Claude Code, start it, and sign in. Watch what it asks for and what it is allowed to do</li>
+          </ul>
+          <div class="prompts" id="w4-install">
+            <strong>Commands the instructor runs</strong>
+            <div class="pline">curl -fsSL https://claude.ai/install.sh | bash</div>
+            <div class="pline">mkdir demo-project &amp;&amp; cd demo-project</div>
+            <div class="pline">claude</div>
+            <button type="button" class="copy" data-copy-from="#w4-install">Copy commands</button>
           </div>
 
-          <h4>Part B: the hallucination hunt</h4>
-          <p>Pick one prompt below. The assistant will probably invent something. Your job is to find the claim, check it against a real source, and write down what you found.</p>
-          <div class="prompts">
-            <strong>Bait prompts</strong>
-            <div class="pline">List four academic papers about Cayman Islands tourism in the 1970s, with authors and years.</div>
-            <div class="pline">Summarise the plot of the 1994 film &ldquo;Seven Mile Sunset.&rdquo;</div>
-            <div class="pline">What did Winston Churchill say about mobile phones?</div>
-            <div class="pline">Name five Caymanian authors and their most famous books.</div>
+          <h4>Part B: one instruction, then hands off (watch and log, 30 min)</h4>
+          <p>The instructor types one instruction and steps back. For the next several minutes nobody touches the keyboard. Keep the observation log below as it works.</p>
+          <div class="prompts" id="w4-scaffold">
+            <strong>The instruction</strong>
+            <div class="pline">Create a small open-source command-line tool in Python that converts amounts between Cayman Islands dollars and US dollars, using a rate the user supplies. Include a README with usage examples, an MIT licence, unit tests, and a GitHub Actions workflow that runs the tests. Initialise a git repository and commit your work in sensible steps. Run the tests and fix anything that fails before you finish.</div>
+            <button type="button" class="copy" data-copy-from="#w4-scaffold">Copy instruction</button>
           </div>
+          <ul class="arrow-list">
+            <li><strong>Log:</strong> what did it do first? Did it plan before it wrote anything?</li>
+            <li><strong>Log:</strong> every file it created, in order</li>
+            <li><strong>Log:</strong> every command it ran, and whether it asked permission or just went ahead</li>
+            <li><strong>Log:</strong> the first error it hit, and what it did about it</li>
+            <li><strong>Log:</strong> anything it did that nobody asked for</li>
+            <li><strong>Log:</strong> minutes from the instruction to &ldquo;done&rdquo;</li>
+          </ul>
+
+          <h4>Part C: write the next instruction (try, 20 min)</h4>
+          <p>Look at what it built. Write one follow-up instruction of your own, no more than three sentences, that would make the project better. The instructor runs a few of them live. Watch whether the change lands the way its author meant.</p>
+          <div class="prompts" id="w4-followups">
+            <strong>Starters, if you are stuck</strong>
+            <div class="pline">Add a --help flag with two worked examples, and update the README to match.</div>
+            <div class="pline">Add tests for negative amounts, zero, and a missing rate. Make them pass.</div>
+            <div class="pline">Add a CONTRIBUTING section to the README that a first-time contributor could follow.</div>
+            <div class="pline">Review your own code for anything a careful maintainer would reject, and fix it.</div>
+            <button type="button" class="copy" data-copy-from="#w4-followups">Copy starters</button>
+          </div>
+
+          <h4>Part D: publish (watch, 10 min)</h4>
+          <ul class="arrow-list">
+            <li>The instructor pushes the repository to GitHub under an open-source licence</li>
+            <li>Read the commit history together. Every commit was written by the agent. Would you know, six months from now, which lines a person wrote?</li>
+            <li>Bookmark the repository. It is part of your take-home</li>
+          </ul>
 
           <div class="ask">
             <strong>Ask yourself</strong>
-            <p>Which rung gave the most useful answer? What exactly did you add to get there?</p>
-            <p>How confident did the assistant sound while it was wrong? Would you have caught it without checking?</p>
-            <p>Name one situation in your studies or job where an invented fact would cause real harm.</p>
+            <p>A chatbot gives you text. This gave you a working project. What exactly changed to make that possible?</p>
+            <p>When did it ask before acting, and when did it just act? Where would you draw that line for a machine that could reach your real files?</p>
+            <p>It fixed its own errors. Did it fix them well, or just make the red messages go away? How would you know?</p>
+            <p>The project is now open source with an MIT licence. Who is the author? Who is responsible if it has a bug?</p>
+            <p>What is one task in your studies or work you would hand to an agent like this, and one you never would?</p>
           </div>
 
           <div class="fits">
             <strong>Where this fits</strong>
-            A language model predicts the next likely word. It does not look anything up unless it is connected to a tool that does. That makes it excellent at drafting and rephrasing and unreliable at facts, especially local facts far from where the training data was written. Next week you audit those gaps on purpose.
+            Weeks 1 to 3 were about a model that predicts. This week the same kind of model was connected to tools: it could read and write files and run commands, and it used them in a loop until the job was done. That loop is what people mean by an &ldquo;agent.&rdquo; It is why the dedicated VM mattered: an agent&rsquo;s reach is set by the machine you run it on, not by good intentions. Next week you audit what these systems assume about people, and you write your own rules for using them.
           </div>
         </div>
         <aside class="aside">
           <h4>Tools</h4>
           <div class="tools-list">
-            <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT (free) <span class="ext">↗</span></a>
-            <a href="https://claude.ai" target="_blank" rel="noopener">Claude (free, backup) <span class="ext">↗</span></a>
+            <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code <span class="ext">↗</span></a>
+            <a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Claude Code docs <span class="ext">↗</span></a>
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub <span class="ext">↗</span></a>
           </div>
           <div class="aside-note">
-            <strong>Prompt recipe</strong>
-            Task &middot; Context &middot; Format &middot; Tone &middot; Constraints &middot; Sources (optional) &middot; Example (optional)
-            <div class="btn-row"><button type="button" class="btn is-small" data-copy="Task: &#10;Context: &#10;Format: &#10;Tone: &#10;Constraints: &#10;Sources (optional): &#10;Example of a good answer (optional): ">Copy recipe</button></div>
+            <strong>You need</strong>
+            Nothing installed. The demo runs on the instructor&rsquo;s VM. If you want to try Claude Code at home later, it needs a computer with a terminal and either a Claude Pro or Max subscription or an Anthropic API key. Use a folder you do not mind losing.
+          </div>
+          <div class="aside-note">
+            <strong>Vocabulary</strong>
+            <em>Agent:</em> a model that uses tools in a loop until a task is done. <em>VM:</em> a virtual machine, a computer running inside another one. <em>Scaffold:</em> the skeleton of a project, all the files and setup before the real work. <em>Repository:</em> a project folder tracked by git.
           </div>
           <div class="takehome">
             <strong>Take-home</strong>
-            Your three-rung prompt ladder + one hallucination with the source that disproves it
+            Your observation log + the follow-up instruction you wrote + the link to the repository the class built
           </div>
         </aside>
       </div>
@@ -477,7 +514,7 @@
 
           <div class="fits">
             <strong>Where this fits</strong>
-            Five weeks, five views of the same machine. You saw that rules and learning are different, that data shapes the model, that what you type can become training data unless you say otherwise, that how you ask changes what you get, and now that what you get carries the assumptions of whoever wrote the data. AI is a mirror of the internet, mostly in English and mostly not from here. You know how to read it, question it, and use it on your terms.
+            Five weeks, five views of the same machine. You saw that rules and learning are different, that data shapes the model, that what you type can become training data unless you say otherwise, that a model with tools can act on its own, and now that what you get carries the assumptions of whoever wrote the data. AI is a mirror of the internet, mostly in English and mostly not from here. You know how to read it, question it, and use it on your terms.
           </div>
         </div>
         <aside class="aside">
@@ -501,8 +538,8 @@
 <section id="tools" class="section">
   <div class="section-header">
     <div class="eyebrow">Toolkit</div>
-    <h2>Six free tools. Nothing to install.</h2>
-    <p class="section-lede">Every lab runs in a normal web browser. Bookmark these now. You will keep using them after the course ends.</p>
+    <h2>Seven tools. Six run free in your browser.</h2>
+    <p class="section-lede">Every lab you do yourself runs in a normal web browser. The one exception is Week 4, which the instructor demonstrates live. Bookmark these now. You will keep using them after the course ends.</p>
   </div>
 
   <div class="tools-grid">
@@ -514,7 +551,7 @@
       <div class="tool-meta">no account &middot; runs in browser</div>
     </a>
     <a class="tool-card" href="https://chat.openai.com" target="_blank" rel="noopener">
-      <span class="tool-week">Weeks 1, 3, 4, 5</span>
+      <span class="tool-week">Weeks 1, 3, 5</span>
       <h4>ChatGPT (free)</h4>
       <p>The most widely used assistant. Our main generative tool. Sign up before Week 1.</p>
       <span class="tool-link">Open ChatGPT &rarr;</span>
@@ -528,7 +565,7 @@
       <div class="tool-meta">no account &middot; runs in browser</div>
     </a>
     <a class="tool-card" href="https://claude.ai" target="_blank" rel="noopener">
-      <span class="tool-week">Weeks 3, 4</span>
+      <span class="tool-week">Week 3</span>
       <h4>Claude (free)</h4>
       <p>Anthropic's assistant. Part of the Week 3 privacy audit, and a fallback if ChatGPT is rate-limited.</p>
       <span class="tool-link">Open Claude &rarr;</span>
@@ -547,6 +584,13 @@
       <p>xAI's assistant, also built into X. The third column of the Week 3 privacy audit.</p>
       <span class="tool-link">Open Grok &rarr;</span>
       <div class="tool-meta">free account required</div>
+    </a>
+    <a class="tool-card" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">
+      <span class="tool-week">Week 4 (demo)</span>
+      <h4>Claude Code</h4>
+      <p>Anthropic's coding agent. Runs in a terminal, edits files and runs commands on its own. Shown live on the instructor's VM.</p>
+      <span class="tool-link">About Claude Code &rarr;</span>
+      <div class="tool-meta">instructor demo &middot; paid plan or API key to run yourself</div>
     </a>
   </div>
 </section>
