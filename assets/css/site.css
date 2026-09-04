@@ -287,6 +287,7 @@ details[open] > summary .toggle::before { border-color: #fff; transform: rotate(
   font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 10px;
 }
 .week-body p { font-size: 15px; line-height: 1.6; }
+.week-body p + p { margin-top: 10px; }
 .week-body p + h4, .week-body ul + h4 { margin-top: 24px; }
 .arrow-list { list-style: none; margin-top: 4px; }
 .arrow-list li { padding: 6px 0 6px 18px; font-size: 14.5px; line-height: 1.5; position: relative; }
