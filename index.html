@@ -388,61 +388,11 @@
           <p>See the difference between an AI that answers and an AI that acts. The instructor sets up a brand-new virtual machine, installs Claude Code (Anthropic&rsquo;s coding agent that runs in a terminal), points it at an empty folder, and gives it one instruction to scaffold an open-source project. Then it runs on its own for several minutes: planning, creating files, running commands, hitting errors and fixing them. Your job is to watch closely, record what it does, and write the instruction that comes next.</p>
           <p>Nothing to install on your side. This session is a guided demo on the projector, with a short exercise you do on paper or in your notes.</p>
 
-          <h4>Part A: provision the machine (watch, 20 min)</h4>
-          <ul class="arrow-list">
-            <li>The instructor creates a fresh Linux VM (a cloud instance or a local one) with nothing on it</li>
-            <li>Why a dedicated VM: the agent can create, edit and delete files and run any command. A throwaway machine means nothing you care about is at risk, and nothing private is on it. Week 3 in practice</li>
-            <li>Install Claude Code, start it, and sign in. Watch what it asks for and what it is allowed to do</li>
-          </ul>
-          <div class="prompts" id="w4-install">
-            <strong>Commands the instructor runs</strong>
-            <div class="pline">curl -fsSL https://claude.ai/install.sh | bash</div>
-            <div class="pline">mkdir demo-project &amp;&amp; cd demo-project</div>
-            <div class="pline">claude</div>
-            <button type="button" class="copy" data-copy-from="#w4-install">Copy commands</button>
-          </div>
-
-          <h4>Part B: one instruction, then hands off (watch and log, 30 min)</h4>
-          <p>The instructor types one instruction and steps back. For the next several minutes nobody touches the keyboard. Keep the observation log below as it works.</p>
-          <div class="prompts" id="w4-scaffold">
-            <strong>The instruction</strong>
-            <div class="pline">Create a small open-source command-line tool in Python that converts amounts between Cayman Islands dollars and US dollars, using a rate the user supplies. Include a README with usage examples, an MIT licence, unit tests, and a GitHub Actions workflow that runs the tests. Initialise a git repository and commit your work in sensible steps. Run the tests and fix anything that fails before you finish.</div>
-            <button type="button" class="copy" data-copy-from="#w4-scaffold">Copy instruction</button>
-          </div>
-          <ul class="arrow-list">
-            <li><strong>Log:</strong> what did it do first? Did it plan before it wrote anything?</li>
-            <li><strong>Log:</strong> every file it created, in order</li>
-            <li><strong>Log:</strong> every command it ran, and whether it asked permission or just went ahead</li>
-            <li><strong>Log:</strong> the first error it hit, and what it did about it</li>
-            <li><strong>Log:</strong> anything it did that nobody asked for</li>
-            <li><strong>Log:</strong> minutes from the instruction to &ldquo;done&rdquo;</li>
-          </ul>
-
-          <h4>Part C: write the next instruction (try, 20 min)</h4>
-          <p>Look at what it built. Write one follow-up instruction of your own, no more than three sentences, that would make the project better. The instructor runs a few of them live. Watch whether the change lands the way its author meant.</p>
-          <div class="prompts" id="w4-followups">
-            <strong>Starters, if you are stuck</strong>
-            <div class="pline">Add a --help flag with two worked examples, and update the README to match.</div>
-            <div class="pline">Add tests for negative amounts, zero, and a missing rate. Make them pass.</div>
-            <div class="pline">Add a CONTRIBUTING section to the README that a first-time contributor could follow.</div>
-            <div class="pline">Review your own code for anything a careful maintainer would reject, and fix it.</div>
-            <button type="button" class="copy" data-copy-from="#w4-followups">Copy starters</button>
-          </div>
-
-          <h4>Part D: publish (watch, 10 min)</h4>
-          <ul class="arrow-list">
-            <li>The instructor pushes the repository to GitHub under an open-source licence</li>
-            <li>Read the commit history together. Every commit was written by the agent. Would you know, six months from now, which lines a person wrote?</li>
-            <li>Bookmark the repository. It is part of your take-home</li>
-          </ul>
-
           <div class="ask">
             <strong>Ask yourself</strong>
-            <p>A chatbot gives you text. This gave you a working project. What exactly changed to make that possible?</p>
-            <p>When did it ask before acting, and when did it just act? Where would you draw that line for a machine that could reach your real files?</p>
-            <p>It fixed its own errors. Did it fix them well, or just make the red messages go away? How would you know?</p>
-            <p>The project is now open source with an MIT licence. Who is the author? Who is responsible if it has a bug?</p>
-            <p>What is one task in your studies or work you would hand to an agent like this, and one you never would?</p>
+            <p>Is this useful?</p>
+            <p>What coding standards did it follow?</p>
+            <p>What libraries did Claude use? And, where are the warnings that some of them are open source and casually maintained?</p>
           </div>
 
           <div class="fits">
